@@ -1,10 +1,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:strip-space elements="*"/>
-<xsl:output method="html" version="1.0" encoding="UTF-8"/>
 
     <xsl:template match="/previsions">
-        <head>
-        </head>
         matin<br/><xsl:apply-templates select="echeance[@hour=6]"/>
         aprem<br/><xsl:apply-templates select="echeance[@hour=12]"/>
         soir<br/><xsl:apply-templates select="echeance[@hour=18]"/>
@@ -37,8 +34,6 @@
 <xsl:template match="vent_moyen/level">
     vent : <xsl:value-of select="."/> km/h <br/>
 </xsl:template>
-
-
 
 
 
